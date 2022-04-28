@@ -18,8 +18,6 @@ public class Aluno {
         this.nome = nome;
     }
 
-
-
     // GET E SET
 
     public String getId() {
