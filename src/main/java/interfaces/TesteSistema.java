@@ -1,5 +1,7 @@
-package com.example.aps;
+package interfaces;
 
+
+import entidades.Aluno;
 
 import javax.swing.*;
 import java.io.*;

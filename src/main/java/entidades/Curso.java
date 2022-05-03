@@ -1,4 +1,4 @@
-package com.example.aps;
+package entidades;
 
 public class Curso {
 

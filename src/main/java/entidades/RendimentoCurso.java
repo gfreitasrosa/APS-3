@@ -1,6 +1,9 @@
-package com.example.aps;
+package entidades;
 
-public class RendimentoCurso extends Curso{
+import entidades.Aluno;
+import entidades.Curso;
+
+public class RendimentoCurso extends Curso {
 
     // ATRIBUTOS
 

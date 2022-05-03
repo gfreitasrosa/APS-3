@@ -1,4 +1,7 @@
-package com.example.aps;
+package interfaces;
+
+import entidades.Aluno;
+import entidades.Curso;
 
 public interface Sistema {
 

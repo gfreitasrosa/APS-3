@@ -1,4 +1,4 @@
-package com.example.aps;
+package entidades;
 
 import java.util.ArrayList;
 import java.util.Objects;
