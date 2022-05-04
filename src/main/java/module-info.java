@@ -5,7 +5,6 @@ module com.example.aps {
 
 
     opens com.example.aps to javafx.fxml;
-    exports com.example.aps;
     exports JavaFX;
     opens JavaFX to javafx.fxml;
     exports entidades;
