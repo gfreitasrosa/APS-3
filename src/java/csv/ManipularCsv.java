@@ -13,9 +13,9 @@ import java.nio.charset.StandardCharsets;
 
 import java.util.Set;
 
-import entidade.Cadastro;
-import entidade.Departamento;
-import entidade.Funcionario;
+import entidades.Aluno;
+import entidades.Curso;
+import entidades.Matricula;
 
 public class ManipularCsv {
 }
