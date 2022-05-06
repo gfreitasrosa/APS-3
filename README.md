@@ -1,6 +1,6 @@
 # APS-3-SEM
 
-### Contribuidores:
+### *Contribuidores*:
 
 <table align="center">
   
