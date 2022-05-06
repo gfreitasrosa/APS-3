@@ -1,8 +1,5 @@
 package entidades;
 
-import entidades.Aluno;
-import entidades.Curso;
-
 public class RendimentoCurso extends Curso {
 
     // ATRIBUTOS
