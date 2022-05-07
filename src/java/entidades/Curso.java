@@ -6,7 +6,7 @@ public class Curso {
 
     private String nome;
     private String tipo;
-    private int ano;
+    private String ano;
 
     // CONSTRUCTOR
 
