@@ -1,4 +1,4 @@
-git # APS-3-SEM
+ # APS-3-SEM
 
 
 ### *Contribuidores*:
