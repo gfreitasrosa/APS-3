@@ -6,11 +6,11 @@ public class Curso {
 
     private String nome;
     private String tipo;
-    private int ano;
+    private String ano;
 
     // CONSTRUCTOR
 
-    public Curso(String nome, String tipo, int ano) {
+    public Curso(String nome, String tipo, String ano) {
         this.nome = nome;
         this.tipo = tipo;
         this.ano = ano;
@@ -34,11 +34,11 @@ public class Curso {
         this.tipo = tipo;
     }
 
-    public int getAno() {
+    public String getAno() {
         return ano;
     }
 
-    public void setAno(int ano) {
+    public void setAno(String ano) {
         this.ano = ano;
     }
 

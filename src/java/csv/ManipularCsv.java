@@ -34,8 +34,8 @@ public class ManipularCsv {
     public Matricula getMatricula(){
         this.cadastroInput = new Matricula();
 
-        loadAluno();
-        loadCurso();
+
+        return loadRelacoes();
     }
 
     private Matricula loadRelacoes(){
@@ -44,30 +44,28 @@ public class ManipularCsv {
             InputStreamReader isr = new InputStreamReader(is, StandardCharsets.UTF_8);
             BufferedReader br = new BufferedReader(isr);
         ){
-        String linha;
-        int i=0;
-        while((linha = br.readLine()) != null);
+            String linha;
+            int i=0;
+            while((linha = br.readLine()) != null) {
 
-            String[] palavras = linhas.split(",");
+                String[] palavras = linha.split(",");
 
-            String idAluno = palavras[0];
-            String nomeAluno = palavras[1];
-            String nomeCurso = palavras[2];
-            String tipoCurso = palavras[3];
-            String anoCurso = palavras[4];
+                String idAluno = palavras[0];
+                String nomeAluno = palavras[1];
+                String nomeCurso = palavras[2];
+                String tipoCurso = palavras[3];
+                String anoCurso = palavras[4];
 
-            Curso curso = new Curso(nomeCurso, tipoCurso, anoCurso);
-            Aluno aluno = new this.cadastroInput.getAlunoFromId(idAluno);
+                Curso curso = new Curso(nomeCurso, tipoCurso, anoCurso);
+                Aluno aluno = this.cadastroInput.getAlunoFromId(idAluno);
 
-            cadastroInput.addRelacaoAlunoCurso(aluno, curso);
-
+                cadastroInput.addRelacaoAlunoCurso(aluno, curso);
+            }
 
         } catch(IOException e){
             e.printStackTrace();
         }
         return this.cadastroInput;
     }
-
-   public class test; 
         
 } 
