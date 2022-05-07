@@ -12,7 +12,7 @@ public class RendimentoCurso extends Curso {
 
     // CONSTRUCTOR
 
-    public RendimentoCurso(String nome, String tipo, int ano, Aluno id, float np1, float np2, float sub, float exame) {
+    public RendimentoCurso(String nome, String tipo, String ano, Aluno id, float np1, float np2, float sub, float exame) {
         super(nome, tipo, ano);
         this.id = id.getId();
         this.np1 = np1;
