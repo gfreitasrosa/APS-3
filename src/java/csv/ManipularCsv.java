@@ -68,6 +68,6 @@ public class ManipularCsv {
         return this.cadastroInput;
     }
 
-    
+   public class test; 
         
 } 
