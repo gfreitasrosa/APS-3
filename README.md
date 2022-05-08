@@ -4,7 +4,7 @@
 
 ## 📁 Acesso ao projeto
 
-Você pode [acessar o código fonte do projeto](https://github.com/gfreitasrosa/APS-3/src) ou [baixá-lo](https://github.com/gfreitarosa/APS-3/archive/refs/heads/src.zip).
+Você pode [acessar o código fonte do projeto](https://github.com/gfreitasrosa/APS-3/src/java) ou [baixá-lo](https://github.com/gfreitarosa/APS-3/archive/refs/heads/src/java.zip).
 
 ### *Desenvolvedores*:
 
