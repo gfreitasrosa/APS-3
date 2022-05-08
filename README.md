@@ -1,6 +1,12 @@
 # APS-3-SEM
 
-### *Contribuidores*:
+![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)![](https://img.shields.io/github/license/alura-cursos/android-com-kotlin-personalizando-ui)
+
+## 📁 Acesso ao projeto
+
+Você pode [acessar o código fonte do projeto](https://github.com/gfreitasrosa/APS-3/src) ou [baixá-lo](https://github.com/gfreitarosa/APS-3/archive/refs/heads/src.zip).
+
+### *Desenvolvedores*:
 
 <table align="center">
   
