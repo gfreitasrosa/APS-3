@@ -1,6 +1,6 @@
 # APS-3-SEM
 
-![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)![](https://img.shields.io/github/license/alura-cursos/android-com-kotlin-personalizando-ui)
+![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)![]
 
 ## 📁 Acesso ao projeto
 
