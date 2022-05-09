@@ -68,19 +68,37 @@ public class ManipularCsv {
         return this.cadastroInput;
     }
         
-  private void saveAlunos(Set<Aluno> alunoOutput){
-    try (
-      OutputStream outputSream = new FileOutputStream(this.alunoDir);
-      OutputStreamWriter outputStreamWriter = new OutputStreamWriter(outputSream, StandardCharsets.UTF_8);
-      PrintWriter printWriter = new PrintWriter(outputStreamWriter, true);
-      ){
-          for (Aluno aluno : alunoOutput) {
-            printWriter.println(aluno.getId() + "," + aluno.getNome());
-          }
+    private void saveAlunos(Set<Aluno> alunoOutput){
+      try (
+          OutputStream outputSream = new FileOutputStream(this.alunoDir);
+          OutputStreamWriter outputStreamWriter = new OutputStreamWriter(outputSream, StandardCharsets.UTF_8);
+          PrintWriter printWriter = new PrintWriter(outputStreamWriter, true);
+        ){
+              for (Aluno aluno : alunoOutput) {
+                printWriter.println(aluno.getId() + "," + aluno.getNome());
+              }
     
-      } catch(IOException error){
-        error.printStackTrace();
+          } catch(IOException error){
+            error.printStackTrace();
+          }
+        }
+
+    private void saveRelacoes(Matricula cadastroOutput){
+
+      try(    OutputStream os = new FileOutputStream(this.relacaoDir);
+              OutputStreamWriter osw = new OutputStreamWriter(os, StandardCharsets.UTF_8);
+              PrintWriter pw = new PrintWriter(osw, true);
+      ){
+        for(Aluno aluno: cadastroOutput.getAlunos()){
+          for(Curso curso: cadastroOutput.getCursosFromAluno(aluno.getId())){
+            pw.println(aluno.getId()+","+aluno.getNome()+","+curso.getNome()+","+curso.getTipo()+","+curso.getAno());
+          }
+        }
+
+      }catch(IOException e){
+        e.printStackTrace();
       }
+
     }
 } 
 
