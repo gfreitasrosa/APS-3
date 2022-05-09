@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-
-# APS-3-SEM
 
 # Atividade Prática Supervisionada - 3º Semestre
-=======
-# Atividade Prática Supervisionada - 3º Semestre
-
->>>>>>> 7336f8050f0ddc440507d4a3fbd0b697adc49633
 
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 
@@ -17,7 +10,6 @@ Você pode [acessar o código fonte do projeto](https://github.com/gfreitasrosa/
 ### *Desenvolvedores*:
 
 <table align="center">
-  
   <tr>
     <td align="center"><a href="https://github.com/gfreitasrosa"><img src="https://avatars.githubusercontent.com/u/81601748?v=4" width="100px;" alt=""/><br /><sub><b>Gabriel Rosa</b></sub></a><br /><a href="https://github.com/gfreitasrosa/APS-3/commits?author=gfreitasrosa"</td>
     <td align="center"><a href="https://github.com/teteu544"><img src="https://avatars.githubusercontent.com/u/93229166?v=4" width="100px;" alt="" title="calvo aos 20"/><br /><sub><b>Matheus Lopes</b></sub></a><br /><a href="https://github.com/gfreitasrosa/APS-3/commits?author=teteu544"</td>
