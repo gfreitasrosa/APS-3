@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 
 # APS-3-SEM
 
 # Atividade Prática Supervisionada - 3º Semestre
+=======
+# Atividade Prática Supervisionada - 3º Semestre
+
+>>>>>>> 7336f8050f0ddc440507d4a3fbd0b697adc49633
 
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 
