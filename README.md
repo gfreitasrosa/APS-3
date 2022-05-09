@@ -1,4 +1,5 @@
-# APS-3-SEM
+ # APS-3-SEM
+
 
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 
@@ -18,3 +19,4 @@ Você pode [acessar o código fonte do projeto](https://github.com/gfreitasrosa/
     <td align="center"><a href="https://github.com/Bryanow"><img src="https://avatars.githubusercontent.com/u/91998706?v=4" width="100px;" alt=""/><br /><sub><b>Bryan Ricardo</b></sub></a><br /><a href="https://github.com/gfreitasrosa/APS-3/commits?author=Bryanow" title="Code">💻</a> <a href="#maintenance-Bryan" title="Maintenance">🚧</a> <a href="#ideas-bryan" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/gfreitasrosa/APS-3/pulls?q=is%3Apr+reviewed-by%3Bryanow" title="Reviewed Pull Requests">👀</a></td> 
   </tr>
 </table>
+

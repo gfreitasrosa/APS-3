@@ -8,52 +8,23 @@ import java.util.List;
 import java.util.Scanner;
 
 public class TestCSV {
-    public static void main(String args[]){
-        try (PrintWriter writer = new PrintWriter(new File("alunos.csv"))) {
+    public static void main(String args[]) {
 
-            StringBuilder sb = new StringBuilder();
-            sb.append("id");
-            sb.append(',');
-            sb.append("Name");
-            sb.append('\n');
+        String aluno = "files/alunos.csv";
+        String curso = "files/crusos.csv";
+        String matricula ="files/matricula.csv";
 
-            sb.append("12314");
-            sb.append(',');
-            sb.append("John Doe");
-            sb.append('\n');
+        ManipularCsv csv = new ManipularCsv(aluno, curso, matricula);
 
-            writer.write(sb.toString());
-            writer.close();
-            System.out.println("done!");
+        csv.getMatricula();
 
-        } catch (FileNotFoundException e) {
-            System.out.println(e.getMessage());
-        }
-        TestCSV testCSV =  new TestCSV();
-        testCSV.readCSVFile();
+        System.out.println((csv.getMatricula()));
+
+
+
+
+
+
+
     }
-
-    public void readCSVFile(){
-        List<List<String>> records = new ArrayList<>();
-        try (Scanner scanner = new Scanner(new File("alunos.csv"));) {
-            while (scanner.hasNextLine()) {
-                records.spliterator();
-                records.add(getRecordFromLine(scanner.nextLine()));
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        System.out.println(records.toString());
-    }
-    private List<String> getRecordFromLine(String line) {
-        List<String> values = new ArrayList<String>();
-        try (Scanner rowScanner = new Scanner(line)) {
-            rowScanner.useDelimiter(",");
-            while (rowScanner.hasNext()) {
-                values.add(rowScanner.next());
-            }
-        }
-        return values;
-    }
-
 }
