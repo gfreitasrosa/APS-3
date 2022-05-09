@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 # Atividade Prática Supervisionada - 3º Semestre
+=======
+ # APS-3-SEM
+
+>>>>>>> 810df0610f8b24c627e52f8ef562d514d664e63e
 
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 
@@ -18,3 +23,4 @@ Você pode [acessar o código fonte do projeto](https://github.com/gfreitasrosa/
     <td align="center"><a href="https://github.com/Bryanow"><img src="https://avatars.githubusercontent.com/u/91998706?v=4" width="100px;" alt=""/><br /><sub><b>Bryan Ricardo</b></sub></a><br /><a href="https://github.com/gfreitasrosa/APS-3/commits?author=Bryanow"</td> 
   </tr>
 </table>
+

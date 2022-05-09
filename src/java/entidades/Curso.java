@@ -10,7 +10,7 @@ public class Curso {
 
     // CONSTRUCTOR
 
-    public Curso(String nome, String tipo, int ano) {
+    public Curso(String nome, String tipo, String ano) {
         this.nome = nome;
         this.tipo = tipo;
         this.ano = ano;
@@ -34,11 +34,11 @@ public class Curso {
         this.tipo = tipo;
     }
 
-    public int getAno() {
+    public String getAno() {
         return ano;
     }
 
-    public void setAno(int ano) {
+    public void setAno(String ano) {
         this.ano = ano;
     }
 
@@ -52,4 +52,34 @@ public class Curso {
                 ", ano=" + ano +
                 '}';
     }
+
+    // HASH CODE
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((ano == null) ? 0 : ano.hashCode());
+        return result;
+    }
+
+    // EQUALS
+    
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Curso other = (Curso) obj;
+        if ((ano == null) || (tipo == null) || (nome == null)) {
+            if ((other.ano != null) && (other.tipo != null) & (other.nome != null))
+                return false;
+        } else if (!ano.equals(other.ano) && (!tipo.equals(other.tipo)) && (!nome.equals(other.tipo)))
+            return false;
+        return true;
+    }
+    
 }
