@@ -19,17 +19,16 @@ import entidades.Matricula;
 
 public class ManipularCsv {
   
-  private String saveAluno;
-    private String alunoPath;
-    private String cursoPath;
-    private String relacaoPath;
+    private String alunoDir;
+    private String cursoDir;
+    private String relacaoDir;
 
     private Matricula cadastroInput;
 
-    public ManipularCsv(String alunoPath, String cursoPath, String relacaoPath){
-        this.alunoPath = alunoPath;
-        this.cursoPath = alunoPath;
-        this.relacaoPath = relacaoPath;
+    public ManipularCsv(String alunoDir, String cursoDir, String relacaoDir){
+        this.alunoDir = alunoDir;
+        this.cursoDir = alunoDir;
+        this.relacaoDir = relacaoDir;
     }   
 
     public Matricula getMatricula(){
@@ -41,7 +40,7 @@ public class ManipularCsv {
 
     private Matricula loadRelacoes(){
 
-        try ( InputStream is = new FileInputStream(this.relacaoPath);
+        try ( InputStream is = new FileInputStream(this.relacaoDir);
             InputStreamReader isr = new InputStreamReader(is, StandardCharsets.UTF_8);
             BufferedReader br = new BufferedReader(isr);
         ){
@@ -71,7 +70,7 @@ public class ManipularCsv {
         
   private void saveAlunos(Set<Aluno> alunoOutput){
     try (
-      OutputStream outputSream = new FileOutputStream(this.saveAluno);
+      OutputStream outputSream = new FileOutputStream(this.alunoDir);
       OutputStreamWriter outputStreamWriter = new OutputStreamWriter(outputSream, StandardCharsets.UTF_8);
       PrintWriter printWriter = new PrintWriter(outputStreamWriter, true);
       ){
