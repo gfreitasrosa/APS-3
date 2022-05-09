@@ -18,7 +18,8 @@ import entidades.Curso;
 import entidades.Matricula;
 
 public class ManipularCsv {
-
+  
+  private String saveAluno;
     private String alunoPath;
     private String cursoPath;
     private String relacaoPath;
@@ -68,4 +69,20 @@ public class ManipularCsv {
         return this.cadastroInput;
     }
         
+  private void saveAlunos(Set<Aluno> alunoOutput){
+    try (
+      OutputStream outputSream = new FileOutputStream(this.saveAluno);
+      OutputStreamWriter outputStreamWriter = new OutputStreamWriter(outputSream, StandardCharsets.UTF_8);
+      PrintWriter printWriter = new PrintWriter(outputStreamWriter, true);
+      ){
+          for (Aluno aluno : alunoOutput) {
+            printWriter.println(aluno.getId() + "," + aluno.getNome());
+          }
+    
+      } catch(IOException error){
+        error.printStackTrace();
+      }
+    }
 } 
+
+
