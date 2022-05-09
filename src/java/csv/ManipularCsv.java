@@ -67,5 +67,23 @@ public class ManipularCsv {
         }
         return this.cadastroInput;
     }
-        
+
+// Cadastro Aluno
+public static void main(String[] args) {
+    Scanner cadastroAluno = new Scanner(System.in);
+        do{
+        System.out.println("Digite o nome do Aluno");
+        nomeAluno = cadastroAluno.nextline();
+        }while(nomeAluno.lenght() < 6 || nomeAluno.lenght > 100);
+    }
+
+    do{
+    System.out.println();
+    cursoAluno = cadastroAluno.nextline();
+    
+}while(cursoAluno.lenght() <= 0 || cursoAluno > 100);
+      
+
+
+
 } 
