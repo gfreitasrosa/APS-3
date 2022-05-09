@@ -1,10 +1,7 @@
-<<<<<<< HEAD
- # APS-3-SEM
 
-### LEMBRAR DE PESQUISAR A RESPEITO DE COMO FAZER O README.md (alura)
-=======
+# APS-3-SEM
+
 # Atividade Prática Supervisionada - 3º Semestre
->>>>>>> 3b9ffb0699aa35641fe98ca93e8adc532ea0c706
 
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 
