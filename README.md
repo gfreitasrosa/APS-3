@@ -1,6 +1,5 @@
  # APS-3-SEM
 
-### LEMBRAR DE PESQUISAR A RESPEITO DE COMO FAZER O README.md (alura)
 
 ### *Contribuidores*:
 
