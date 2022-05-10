@@ -1,7 +1,7 @@
 package entidades;
 
 
-public class Aluno {
+public class Aluno implements Comparable{
 
     // ATRIBUTOS
 
@@ -74,5 +74,8 @@ public class Aluno {
         return true;
     }
 
-    
+    @Override
+    public int compareTo(Object o) {
+        return 0;
+    }
 }
