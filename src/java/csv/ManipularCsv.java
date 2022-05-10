@@ -75,5 +75,21 @@ public class ManipularCsv {
 		saveCursos(cadastroOutput.getDepartamentos());
 		saveRelacoes(cadastroOutput);
     } 
+   
+     // Save Matricula
+    private void saveMatricula(Set<matricula> matriculaOutput){
 
+        try(    OutputStream os = new FileOutputStream(this.matricula);
+                OutputStreamWriter osw = new OutputStreamWriter(os, StandardCharsets.UTF_8);
+                PrintWriter pw = new PrintWriter(osw, true);
+                ){
+            for(Matricula matricula: matricula){
+                pw.println(matricula.getidAluno()+ ","+ matricula.getnomeAluno()+"," + matricula.getnomeCurso() + "," + matricula.gettipoCurso() + "," + matricula.getanoCurso());
+            }
+
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+
+    }
 }
