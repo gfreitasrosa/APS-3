@@ -10,7 +10,7 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
-
+import java.util.Scanner;
 import java.util.Set;
 
 import entidades.Aluno;
@@ -67,6 +67,7 @@ public class ManipularCsv {
         }
         return this.cadastroInput;
     }
+<<<<<<< HEAD
         
     private void saveAlunos(Set<Aluno> alunoOutput){
       try (
@@ -103,3 +104,31 @@ public class ManipularCsv {
 } 
 
 
+=======
+    
+    /* Save Cadastro */
+    public void saveCadastro(Cadastro cadastroOutput){
+		
+	    saveAluno(cadastroOutput.getFuncionarios());
+		saveCursos(cadastroOutput.getDepartamentos());
+		saveRelacoes(cadastroOutput);
+    } 
+   
+     // Save Matricula
+    private void saveMatricula(Set<matricula> matriculaOutput){
+
+        try(    OutputStream os = new FileOutputStream(this.matricula);
+                OutputStreamWriter osw = new OutputStreamWriter(os, StandardCharsets.UTF_8);
+                PrintWriter pw = new PrintWriter(osw, true);
+                ){
+            for(Matricula matricula: matricula){
+                pw.println(matricula.getidAluno()+ ","+ matricula.getnomeAluno()+"," + matricula.getnomeCurso() + "," + matricula.gettipoCurso() + "," + matricula.getanoCurso());
+            }
+
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+
+    }
+}
+>>>>>>> Allan
