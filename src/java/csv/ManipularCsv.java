@@ -67,7 +67,6 @@ public class ManipularCsv {
         }
         return this.cadastroInput;
     }
-<<<<<<< HEAD
         
     private void saveAlunos(Set<Aluno> alunoOutput){
       try (
@@ -103,8 +102,6 @@ public class ManipularCsv {
     }
 } 
 
-
-=======
     
     /* Save Cadastro */
     public void saveCadastro(Cadastro cadastroOutput){
@@ -131,4 +128,3 @@ public class ManipularCsv {
 
     }
 }
->>>>>>> Allan
