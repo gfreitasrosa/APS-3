@@ -19,9 +19,9 @@ import entidades.Matricula;
 
 public class ManipularCsv {
   
-    private String alunoDir;
-    private String cursoDir;
-    private String relacaoDir;
+    final String alunoDir;
+    final String cursoDir;
+    final String relacaoDir;
 
     private Matricula cadastroInput;
 
@@ -42,10 +42,9 @@ public class ManipularCsv {
 
         try ( InputStream is = new FileInputStream(this.relacaoDir);
             InputStreamReader isr = new InputStreamReader(is, StandardCharsets.UTF_8);
-            BufferedReader br = new BufferedReader(isr);
+            BufferedReader br = new BufferedReader(isr)
         ){
             String linha;
-            int i=0;
             while((linha = br.readLine()) != null) {
 
                 String[] palavras = linha.split(",");
@@ -72,7 +71,7 @@ public class ManipularCsv {
       try (
           OutputStream outputSream = new FileOutputStream(this.alunoDir);
           OutputStreamWriter outputStreamWriter = new OutputStreamWriter(outputSream, StandardCharsets.UTF_8);
-          PrintWriter printWriter = new PrintWriter(outputStreamWriter, true);
+          PrintWriter printWriter = new PrintWriter(outputStreamWriter, true)
         ){
               for (Aluno aluno : alunoOutput) {
                 printWriter.println(aluno.getId() + "," + aluno.getNome());
@@ -87,7 +86,7 @@ public class ManipularCsv {
 
       try(    OutputStream os = new FileOutputStream(this.relacaoDir);
               OutputStreamWriter osw = new OutputStreamWriter(os, StandardCharsets.UTF_8);
-              PrintWriter pw = new PrintWriter(osw, true);
+              PrintWriter pw = new PrintWriter(osw, true)
       ){
         for(Aluno aluno: cadastroOutput.getAlunos()){
           for(Curso curso: cadastroOutput.getCursosFromAluno(aluno.getId())){
@@ -104,7 +103,7 @@ public class ManipularCsv {
     /* Save Cadastro */
     public void saveCadastro(Matricula cadastroOutput){
 		
-	    saveAluno(cadastroOutput.getAlunos());
+	    saveAlunos(cadastroOutput.getAlunos());
 		saveCursos(cadastroOutput.getCursos());
 		saveRelacoes(cadastroOutput);
     } 
