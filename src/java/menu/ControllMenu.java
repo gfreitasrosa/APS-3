@@ -9,12 +9,11 @@ import java.util.TreeMap;
 
 public class ControllMenu {
 
-    private Sistema interf;
-    private ManipularCsv csvDir;
-    private Matricula matricula;
+    private final Sistema interf;
+    private final ManipularCsv csvDir;
 
     public static Map<Integer, Menu> opcoesByCodigos = new TreeMap<>();
-    {
+    static {
         for(Menu o: Menu.values()){
             opcoesByCodigos.put(o.num, o);
         }
@@ -26,67 +25,49 @@ public class ControllMenu {
     }
 
     public void iniciar(){
-        matricula = csvDir.getMatricula();
+        Matricula matricula = csvDir.getMatricula();
 
         Menu num = null;
         while(num!=Menu.SAIR){
             num = interf.menu();
-            switch (num){
-                case LISTAR_CURSOS: {listarCursos(); break;}
-                case LISTAR_ALUNOS: {listarAlunos(); break;}
-                case LISTAR_ALUNOS_FROM_CURSOS: {listarAlunosDoCurso(); break;}
-                case LISTAR_CURSOS_FROM_ALUNOS: {listarCursosDoAluno(); break;}
-                case ADICIONA_ALUNO: {addAluno(); break;}
-                case ADICIONA_CURSO: {addCurso(); break;}
-                case ADICIONA_MATRICULA: {addMatricula(); break;}
-                case SAIR: {sair(); break;}
+            switch (num) {
+                case LISTAR_CURSOS -> {
+                    interf.listarCursos(matricula);
+                }
+                case LISTAR_ALUNOS -> {
+                    interf.listarAlunos(matricula);
+                }
+                case LISTAR_ALUNOS_FROM_CURSOS -> {
+                    Curso Curso = interf.getCursoFromList(matricula);
+                    if (Curso == null) return;
+                    interf.listarAlunosDoCurso(matricula, Curso);
+                }
+                case LISTAR_CURSOS_FROM_ALUNOS -> {
+                    Aluno Aluno = interf.getAlunoFromList(matricula);
+                    if (Aluno == null) return;
+                    interf.listarCursosDoAluno(matricula, Aluno);
+                }
+                case ADICIONA_ALUNO -> {
+                    Aluno aluno = interf.addAluno();
+                    matricula.addAluno(aluno);
+                }
+                case ADICIONA_CURSO -> {
+                    Curso curso = interf.addCurso();
+                    matricula.addCurso(curso);
+                }
+                case ADICIONA_MATRICULA -> {
+                    Aluno Aluno = interf.getAlunoFromList(matricula);
+                    if (Aluno == null) return;
+                    Curso Curso = interf.getCursoFromList(matricula);
+                    if (Curso == null) return;
+                    matricula.addRelacaoAlunoCurso(Aluno, Curso);
+                }
+                case SAIR -> {
+                    csvDir.saveCadastro(matricula);
+                }
             }
         }
     }
-    
-    private void listarAlunos(){
-        interf.listarAlunos(matricula);
-    }
-    
-    private void listarCursos(){
-        interf.listarCursos(matricula);
-    }
-    
-    private void addAluno(){
-        Aluno aluno = interf.addAluno();
-        this.matricula.addAluno(aluno);
-    }
-    
-    private void addCurso(){
-        Curso curso = interf.addCurso();
-        this.matricula.addCurso(curso);
-    }
-    
-    private void listarAlunosDoCurso(){
-        Curso Curso = interf.getCursoFromList(matricula);
-        if(Curso==null) return;
-        interf.listarAlunosDoCurso(matricula, Curso);
-    }
-
-    private void listarCursosDoAluno() {
-        Aluno Aluno = interf.getAlunoFromList(matricula);
-        if(Aluno==null) return;
-        interf.listarCursosDoAluno(matricula, Aluno);
-    }
-
-    private void addMatricula() {
-        Aluno Aluno = interf.getAlunoFromList(matricula);
-        if(Aluno==null) return;
-        Curso Curso = interf.getCursoFromList(matricula);
-        if(Curso==null) return;
-        matricula.addRelacaoAlunoCurso(Aluno, Curso);
-
-    }
-
-    private void sair() {
-        csvDir.saveCadastro(matricula);
-    }
-
 
 
 
