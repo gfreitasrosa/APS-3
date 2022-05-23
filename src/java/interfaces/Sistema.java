@@ -1,16 +1,25 @@
 package interfaces;
 
-import entidades.Aluno;
-import entidades.Curso;
+import entidades.*;
+
+import menu.Menu;
+
+
 
 public interface Sistema {
 
-    public void listarCursos();
-    public void listarAlunos();
-    public void limparHist();
-    public void listarRel();
-    public void addAluno(int id, String nome);
-    public void addCurso(String nome, String tipo, int ano);
-    public void addRend(Aluno aluno, Curso curso, float np1, float np2, float sub, float ex);
+    Menu menu();
+
+    public void listarCursos(Matricula matricula);
+    public void listarAlunos(Matricula matricula);
+
+    public void listarAlunosDoCurso(Matricula matricula, Curso curso);
+    public void listarCursosDoAluno(Matricula matricula, Aluno aluno);
+
+    public Aluno addAluno();
+    public Curso addCurso();
+
+    public Curso getCursoFromList(Matricula matricula);
+    public Aluno getAlunoFromList(Matricula matricula);
 
 }

@@ -2,10 +2,10 @@ package menu;
 
 public enum Menu {
 
-    LISTA_CURSOS(1, "Listar todos os cursos dados"),
-    LISTA_ALUNOS(2, "Listar todos os alunos inscritos"),
-    LISTA_ALUNOS_FROM_CURSOS(3, "Listar os cursos que um determinado aluno está cadastrado"),
-    LISTA_CURSOS_FROM_ALUNOS(4, "Listar os aluns que estão matriculados em um determinado curso"),
+    LISTAR_CURSOS(1, "Listar todos os cursos dados"),
+    LISTAR_ALUNOS(2, "Listar todos os alunos inscritos"),
+    LISTAR_ALUNOS_FROM_CURSOS(3, "Listar os cursos que um determinado aluno está cadastrado"),
+    LISTAR_CURSOS_FROM_ALUNOS(4, "Listar os aluns que estão matriculados em um determinado curso"),
     ADICIONA_ALUNO(5, "Incluir um novo aluno"),
     ADICIONA_CURSO(6, "Incluir um novo curso"),
     ADICIONA_MATRICULA(7, "Matricular um aluno já existente em um curso já existente"),
