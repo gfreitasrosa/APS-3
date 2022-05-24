@@ -1,7 +1,6 @@
 package main;
 
 import interfaces.*;
-import entidades.*;
 import csv.*;
 import menu.*;
 

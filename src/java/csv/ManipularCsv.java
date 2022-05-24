@@ -135,13 +135,13 @@ public class ManipularCsv {
           }
         }
 
-    private void saveCursos(Set<Curso> departamentoOutput){
+    private void saveCursos(Set<Curso> cursosOutput){
 
         try(    OutputStream os = new FileOutputStream(this.cursoDir);
                 OutputStreamWriter osw = new OutputStreamWriter(os, StandardCharsets.UTF_8);
                 PrintWriter pw = new PrintWriter(osw, true);
         ){
-            for(Curso cursos: departamentoOutput){
+            for(Curso cursos: cursosOutput){
                 pw.println(cursos.getNome()+","+cursos.getTipo()+","+cursos.getAno());
             }
 
@@ -170,10 +170,10 @@ public class ManipularCsv {
     }
 
     public void saveCadastro(Matricula cadastroOutput){
-		
+
 	    saveAlunos(cadastroOutput.getAlunos());
 		saveCursos(cadastroOutput.getCursos());
 		saveRelacoes(cadastroOutput);
-    } 
+    }
 
 }
